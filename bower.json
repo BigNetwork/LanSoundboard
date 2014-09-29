@@ -1,0 +1,21 @@
+{
+  "name": "lansoundboard",
+  "version": "0.0.0",
+  "authors": [
+    "MPV <mpv@bignetwork.se>"
+  ],
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "react": "~0.11.2"
+  }
+}
