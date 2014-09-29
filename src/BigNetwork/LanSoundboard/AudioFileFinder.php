@@ -5,15 +5,35 @@ namespace BigNetwork\LanSoundboard;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 
+/**
+ * Class AudioFileFinder
+ *
+ * Finds and returns a number of audio files in a given folder.
+ *
+ * @package BigNetwork\LanSoundboard
+ */
 class AudioFileFinder {
 
 	protected $path = __DIR__;
-	protected $finder = null;
 
-	public function __construct(Finder $finder, $folderPath = __DIR__)
+	/**
+	 * Constructor
+	 *
+	 * @param string $folderPath Path to where the audio files can be found.
+	 */
+	public function __construct($folderPath = __DIR__)
 	{
 		$this->path = $folderPath;
-		$this->finder = $finder;
+	}
+
+	/**
+	 * Get a Finder
+	 *
+	 * @return Finder
+	 */
+	protected function getFinder()
+	{
+		return new Finder();
 	}
 
 	/**
@@ -21,7 +41,7 @@ class AudioFileFinder {
 	 */
 	public function getFiles()
 	{
-		return $this->finder->files()->in($this->path)->name('*.*')->sort(
+		return $this->getFinder()->files()->in($this->path)->name('*.*')->sort(
 			// Sort files by natural file name order:
 			function (\SplFileInfo $a, \SplFileInfo $b)
 			{

@@ -6,7 +6,7 @@ include_once('src/BigNetwork/LanSoundboard/AudioFileFinder.php');
 use \BigNetwork\LanSoundboard\AudioFileFinder;
 use \Symfony\Component\Finder\Finder;
 
-$audioFileFinder = new AudioFileFinder(new Finder(), __DIR__ . '/sounds');
+$audioFileFinder = new AudioFileFinder(__DIR__ . '/sounds');
 $audioFiles = $audioFileFinder->getFiles();
 
 $sounds = array();
@@ -34,7 +34,7 @@ foreach ($audioFiles as $audioFile) {
 		<title>LanSoundboard</title>
 		<style type="text/css">
 			html{
-				font-family: Helvetica, Arial;
+				font-family: Helvetica, Arial, sans-serif;
 			}
 			#soundboard{
 
