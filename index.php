@@ -32,6 +32,7 @@ foreach ($audioFiles as $audioFile) {
 <html>
 	<head>
 		<title>LanSoundboard</title>
+		<meta property="og:image" content="icon.png" />
 		<style type="text/css">
 			html{
 				font-family: Helvetica, Arial, sans-serif;
