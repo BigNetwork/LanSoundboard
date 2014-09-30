@@ -83,11 +83,21 @@ foreach ($audioFiles as $audioFile) {
 				display: inline-block;
 				background-color: #008bc8;
 			}
+			#footer {
+				clear: both;
+				font-size: 12px;
+				padding-top: 50px;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
 
 <div id="soundboard"></div>
+
+<div id="footer">
+Detta &auml;r ett scene-bidrag fr&aring;n MPV &amp; Sporki till lanpartyt SummerGate14. Koden finns h&auml;r: <a href="http://www.github.com/bignetwork/LanSoundboard/">github.com/bignetwork/LanSoundboard</a>.
+</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/react/react.min.js"></script>
